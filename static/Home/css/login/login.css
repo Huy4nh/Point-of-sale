@@ -1,0 +1,54 @@
+#login-img {
+    width: 100%;
+    height: 100%;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+.blue-text, a {
+    color: #1A73E8;
+}
+
+label {
+    font-weight: bold;
+}
+
+.input-group-prepend span {
+    background-color: white;
+}
+
+form {
+    padding-right: 2%;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* css cho icon con mat */
+.input-group {
+    position: relative;
+}
+
+#eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Footer */
+.navbar-end {
+    background-color: #DEE1E3;
+}
+
+.info {
+    color: black;
+}
+
+.fa-brands {
+    cursor: pointer;
+}

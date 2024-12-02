@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">STT</th>
+        <th scope="col">name</th>
+        <th scope="col">item quantity</th>
+        <th scope="col">total_price</th>
+        <th scope="col">create_date</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for item in reponse %}
+      <tr>
+        <th scope="row">1</th>
+        <td>{{ item.name }}</td>
+        <td>{{ item.item_quantity }}</td>
+        <td>{{ item.total_price }}</td>
+        <td>{{ item.create_date }}</td>
+        <td>{{ item.phone_number }}</td>
+        <td><button class="purchase" value="{{ item.phone_number }}">Thanh toán</button></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>

@@ -1,0 +1,22 @@
+<tr>
+    <th>STT</th>
+    <th> </th>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Unit Price</th>
+    <th>Total Price</th>
+  </tr>
+{% for item in items %}
+<tr>
+    <th> {{ item.id }}.</th>
+    <td><img src="{{item.img}}" alt="{{ item.product_name }}" style="width:120px;height:120px;"></td>
+    <td> {{ item.product_name }}</td>
+    <td> {{ item.quantity }}</td>
+    <td> {{ item.unit_price }}</td>
+    <td> {{ item.total_price }}</td>
+</tr>
+{% endfor %}
+<tr>
+    <th colspan="5" style="text-align: right;margin-right: 2px;">Total = </th>
+    <td> {{ total }}</td>
+</tr>

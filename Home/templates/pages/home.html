@@ -1,0 +1,96 @@
+{% extends "pages/base.html" %}
+
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block header %}
+asdsadasdasd
+{% endblock %}
+<!-- ------------------------------------------------------------------------------------------- -->
+{% block logout %}
+<li style="text-align: right;padding:4px;"><button href="#" id="logout">Log out</button></li>
+{% endblock %}
+<!-- ------------------------------------------------------------------------------------------- -->
+
+{% block account_info %}
+<div class="row">
+<div class="col"> 
+<p class="rounded-bottom" style="height: 50px;text-align: center;background-color: burlywood;border-radius: 13px;">{{ user.username }}</p>
+</div>
+</div>
+<div class="row">
+    <div class="col"><image src="{{ user.avatar.url }}"style="height: 220px;width: 220px;"></image></div>
+</div>
+{% endblock %}
+
+<!-- ------------------------------------------------------------------------------------------- -->
+
+{% block chucnang %}
+<tr>
+<td>
+<li><a href="#" id="view_products">Xem sản phẩm</a></li>
+</td>
+</tr>
+<tr>
+<td>
+<li><a href="#" id="add_product_link">Thêm sản phẩm</a></li>
+</td>
+</tr>
+<tr>
+    <td>
+<li><a href="javascript:void(0);" id="changeUsernameBtn">Change Username</a></li>
+</td>
+</tr>
+<tr>
+    <td>
+<li><a href="javascript:void(0);" id="changePasswordBtn">Change Password</a></li>
+</td>
+</tr>
+<tr>
+    <td>
+<li><a href="#" id="create_transaction">Tạo giao dịch</a></li>
+</td>
+</tr>
+
+{% if user == "creater" or user.is_admin %}
+<tr>
+    <td>
+    <li><a href="#" id="add_account_link">Đăng ký tài khoản</a></li>
+</td>
+</tr>
+<tr>
+    <td>
+    <li><a href="#" id="view_accounts">Xem nhân viên</a></li>
+</td>
+</tr>
+<tr>
+    <td>
+    <li><a href="#" id="purchasing_wait">Xem thanh toán chờ</a></li>
+</td>
+</tr>
+{% endif %}
+{% endblock %}
+
+<!-- -------------------------------------------S------------------------------------------------- -->
+
+{% block content %}
+
+
+<script src="{% static 'Home\product\product_view.js' %}"></script>
+
+<script src="{% static 'Home\product\product_add.js' %}"></script>
+
+<script src="{% static 'Home\account\account_view.js' %}"></script>
+
+<script src="{% static 'Home\account\account_add.js' %}"></script>
+
+<script src="{% static 'Home\account\logout.js' %}"></script>
+
+<script src="{% static 'Home\account\change_info.js' %}"></script>
+
+<script src="{% static 'Home\transaction\transaction_add.js' %}"></script>
+
+<script src="{% static 'Home\customer\purchase_process.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,7 @@
+<form id="changeUsernameForm">
+  {% csrf_token %}
+  <input type="text" name="new_username" placeholder="New Username">
+  <button type="submit">Change Username</button>
+</form>
+<div id="usernameMessage"></div>
+<a href="{% url 'home' %}">Back to profile</a>
